@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-buttons',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './buttons.component.html',
+  styleUrl: './buttons.component.css'
 })
-export class HeaderComponent {
+export class ButtonsComponent {
+
 }
