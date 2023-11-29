@@ -2,12 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
-  selector: 'app-header',
+  selector: 'app-paginator',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  templateUrl: './paginator.component.html',
+  styleUrl: './paginator.component.css'
 })
-export class HeaderComponent {
-  title = 'MovieBoo'
+export class PaginatorComponent {
+
 }
