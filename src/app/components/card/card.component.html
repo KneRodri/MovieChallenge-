@@ -1,0 +1,11 @@
+<p>cards works!</p>
+
+<section class="card" *ngIf="movie">
+    <img [src]=" movie.poster_path? 'https://image.tmdb.org/t/p/w500' + movie.poster_path : '../../../assets/no-image.jpg'">
+    <section class="infoMovie">
+        <h3>{{ movie.title }}</h3>
+        <p>{{ movie.release_date | date: 'yyyy' }}</p>
+    </section>
+</section>
+
+//paginator
