@@ -1,0 +1,17 @@
+.btnFather {
+
+}
+
+.btnContainer {
+    position: absolute;
+    top: 1rem;
+}
+
+.btn {
+    background: none;
+    border: none;
+    border-bottom: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    margin: 0.5rem;
+    padding: 0;
+}

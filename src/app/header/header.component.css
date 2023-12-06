@@ -1,0 +1,15 @@
+.title {
+    display: flex;
+    justify-content: center;
+    color: #cab3b3;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.5rem;
+
+}
+.logo {
+    width: 10rem;
+    height: 5rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
