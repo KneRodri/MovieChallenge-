@@ -1,0 +1,13 @@
+.cardContainer {
+    background-color: #FFFFFF;
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.btnCard {
+    width: 150px;
+    height: 230px;
+    background-color: #FFFFFF;
+}
