@@ -1,9 +1,9 @@
-<section class="cardContainter">
+<section class="cardContainer">
     <button class="btnCard" *ngFor="let movie of movies">
         <img [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w500/' + movie.poster_path : '../../../assets/no-image.jpg'">
         <section class="movieTittle">
-            <h3>{{ movie.title }}</h3>
+            <h3 class="nameTittle">{{ movie.title }}</h3>
+            <h2 class="dateCard">{{movie.release_date}}</h2>
         </section>
     </button>
- 
 </section>

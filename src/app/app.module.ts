@@ -11,6 +11,7 @@ import { CardComponent } from './card/card.component';
 import { MovieComponent } from './movie/movie.component';
 
 import { ShareService } from './share/share.service';
+import { MovieDetailsComponent } from './movie-details/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ShareService } from './share/share.service';
     ButtonsComponent,
     CardComponent,
     MovieComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
