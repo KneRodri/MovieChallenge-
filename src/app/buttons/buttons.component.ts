@@ -12,4 +12,13 @@ export class ButtonsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  showGenre(){
+    console.log('muestra');
+  }
+
+  orderList(){
+    console.log('vamos');
+  }
+   
+  
 }
