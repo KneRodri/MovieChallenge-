@@ -7,6 +7,7 @@ import { ShareService } from 'src/app/share/share.service';
   styleUrls: ['./movie-details.component.css']
 })
 export class MovieDetailsComponent implements OnInit {
+  id: number = 0;
   title: string = '';
   vote_count: number = 70;
   releaseYear: string = '';
@@ -14,8 +15,8 @@ export class MovieDetailsComponent implements OnInit {
   details: any = {};
   img_url: string = 'https://image.tmdb.org/t/p/w500/';
   backdrop_img: string = '';
-  // genresStrings: any = [];
-  // movieGenres: any[] = [];
+  genresStrings: any = [];
+  movieGenres: any[] = [];
 
   constructor(
     private shareService: ShareService,

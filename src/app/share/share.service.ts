@@ -17,11 +17,13 @@ export class ShareService {
     return this.http.get<APIresponse>(`${this.apiUrl}movie/popular?api_key=${this.apiKey}`);
   }
 
-  // movieDetails(movieId: number) : Observable<Movie> {
+ 
+}
+
+ // movieDetails(movieId: number) : Observable<Movie> {
   //   return this.http.get<Movie>(`${this.apiUrl}/movie/${movieId}?api_key=${this.apiKey}`)
   // }
 
   // getGenresList(): Observable<GenresList> {
   //   return this.http.get<GenresList>(`${this.apiUrl}/genre/movie/list?api_key=${this.apiKey}`);
   // }
-}

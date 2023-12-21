@@ -9,10 +9,10 @@ import { ShareService } from '../share/share.service';
 export class CardComponent implements OnInit {
 
   movies: any = [];
-  currentPage: number = 40596;
-  page_size: number = 20;
+  currentPage: number = 1;
+  pageSize: number = 18;
   pages: number[] = [];
-  pageSizeOptions = [20];
+  pageSizeOptions = [18];
   selectedSort: string = '';
   filterOption: string = '';
   release_year: string = '';
@@ -23,9 +23,18 @@ export class CardComponent implements OnInit {
   constructor(private shareService: ShareService) { }
 
   ngOnInit(): void {
+    this.loadMovies();
+  }
+
+  loadMovies() {
     this.shareService.getPopularMovies().subscribe(resp => {
-      this.movies = resp.results;
+      this.movies = resp.total_results;
+      const startIndex = (this.currentPage - 1) * this.pageSize;
+      const endIndex = startIndex + this.pageSize;
+      this.movies = resp.results.slice(startIndex, endIndex);
+
     });
   }
+
 
 }
