@@ -11,14 +11,6 @@ export class CardComponent implements OnInit {
   movies: any = [];
   currentPage: number = 1;
   pageSize: number = 18;
-  pages: number[] = [];
-  pageSizeOptions = [18];
-  selectedSort: string = '';
-  filterOption: string = '';
-  release_year: string = '';
-  default_sort: string = 'popularity.desc';
-  default_filter: string = '28';
-  data: any = [];
 
   constructor(private shareService: ShareService) { }
 
@@ -38,3 +30,8 @@ export class CardComponent implements OnInit {
 
 
 }
+
+ // selectedSort: string = '';
+  // filterOption: string = '';
+  // default_sort: string = 'popularity.desc';
+  // default_filter: string = '28';
