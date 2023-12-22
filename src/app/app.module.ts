@@ -8,7 +8,7 @@ import { HomeComponent } from './views/home/home.component';
 import { HeaderComponent } from './header/header.component';
 import { ButtonsComponent } from './buttons/buttons.component';
 import { CardComponent } from './card/card.component';
-import { MovieComponent } from './movie/movie.component';
+// import { MovieComponent } from './movie/movie.component';
 
 import { ShareService } from './share/share.service';
 import { MovieDetailsComponent } from './movie-details/movie-details/movie-details.component';
@@ -20,7 +20,7 @@ import { MovieDetailsComponent } from './movie-details/movie-details/movie-detai
     HeaderComponent,
     ButtonsComponent,
     CardComponent,
-    MovieComponent,
+    // MovieComponent,
     MovieDetailsComponent,
   ],
   imports: [
