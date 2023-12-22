@@ -1,14 +1,20 @@
-<section class="btn">
-    <section>
+<section class="movieContainer">
+    <section class="movieDetailsBackdrop" [ngStyle]="{'background-image': 'url(' + getBackdropImage() + ')'}">
         <button class="btnReturn" routerLink="/app-home">Back to list</button>
     </section>
-       <section class="container">
-            <section class="imgMovie">
-                <img src="" alt="">
+       <section class="detailsMovie">
+            <img class="moviePoster" [src]="details ? 'https://image.tmdb.org/t/p/w500/' + details.poster_path : ''" [alt]=details.title>
+            <section class="movieVotes">
+                <p class="votes">{{ details.vote_average }}</p>
+                <h2>{{ details.vote_count }}</h2>
             </section>
-            <section class="description">
-          
+            <h1 class="tittle">{{ details.original_title }}</h1>
+            <h3>{{ releaseYear }}</h3>
+            <section class="movieGenres" *ngFor = 'let genre of movieGenres' >
+                <p>{{ genre.name }}</p>
             </section>
     </section>
+    <section class="sinopsis">
+        <p>{{ details.overview }}</p>
+    </section>
 </section>
-
