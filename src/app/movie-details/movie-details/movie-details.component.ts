@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ShareService } from 'src/app/share/share.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-movie-details',
@@ -13,16 +14,41 @@ export class MovieDetailsComponent implements OnInit {
   releaseYear: string = '';
   genres: any = {};
   details: any = {};
-  img_url: string = 'https://image.tmdb.org/t/p/w500/';
+  imgs_url: string = 'https://image.tmdb.org/t/p/w500/';
   backdrop_img: string = '';
   genresStrings: any = [];
   movieGenres: any[] = [];
 
   constructor(
     private shareService: ShareService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit(): void {
+    this.getDetailsById();
   }
 
+  private getDetailsById(): void {
+    this.route.params.subscribe(params => {
+      this.id = +params['id'];
+      console.log(this.id, 'hola id');
+      this.fillDetails(this.id);
+    });
+  }
+
+  fillDetails(movieId: number) {
+    this.shareService.getMovieDetails(movieId).subscribe(data => {
+      console.log(data, 'hola data');
+      this.details = data;
+      console.log(this.details.genres, 'Hola generos');
+      this.movieGenres = this.details.genres
+    })
+  }
+
+  getBackdropImage() {
+    if (this.details) {
+      return this.imgs_url + this.details.backdrop_path;
+    }
+    return '';
+  }
 }
